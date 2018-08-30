@@ -1,0 +1,63 @@
+@mixin circle-img {
+    border-radius: 50%;
+    background-color: silver;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.mat-drawer-container {
+    min-height: 100%;
+    .mat-drawer {
+        min-width: 220px;
+        .drawer-header {
+            height: 130px;
+            .drawer-profile {
+                width: 100%;
+                img {
+                    height: 80px;
+                    width: 80px;
+                    display: block;
+                    margin: 20px auto 0px auto;
+                    @include circle-img;
+                }
+                p {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 5px;
+                }
+            }
+        }
+        .mat-list {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            .mat-list-item {
+                outline: none;
+                &:hover {
+                    background-color: rgb(82, 138, 241);
+                    cursor: pointer;
+                    color: white;
+                }
+            }
+        }
+    }
+    .mat-drawer-content {
+        .mat-toolbar {
+            display: flex;
+            justify-content: space-between;
+            div {
+                display: flex;
+            }
+            .second-toolbar-content {
+                img {
+                    height: 40px;
+                    width: 40px;
+                    @include circle-img;
+                }
+            }
+        }
+        .home-content {
+            padding: 5px;
+        }
+    }
+}
